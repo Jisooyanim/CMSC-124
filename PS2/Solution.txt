@@ -1,0 +1,55 @@
+[[x,y],[y,z]] := S
+              := [A, S]
+              := [S, S]
+              := [[A, S], S]
+              := [[C, S], S]
+              := [[x, S], S]
+              := [[x, A], S]
+              := [[x, C], S]
+              := [[x, y], S]
+              := [[x, y], [A, S]]
+              := [[x, y], [C, S]]
+              := [[x, y], [y, S]]
+              := [[x, y], [y, A]]
+              := [[x,y], [y, C]]
+              := [[x, y], [y, z]]
+
+babb := <S>
+     := <A>a<B>b
+     := ba<B>b
+     := babb
+
+bbbabb := <S>
+       := <A>a<B>b
+       := <A>ba<B>b
+       := <A>bba<B>b
+       := bbba<B>b
+       := bbbabb
+
+<S> -> <AB>B
+<AB> -> a<AB>b | ab
+
+String: a + b + C
+Version 1:
+a + b + c := <S>
+          := <A>
+          := <A> + <A>
+          := <A> + <A> + <A>
+          := <id> + <A> + <A>
+          := a + <A> + <A>
+          := a + <id> + <A>
+          := a + b + <A>
+          := a + b + <id>
+          := a + b + c
+
+Version 2: 
+a + b + c := <S>
+          := <A>
+          := <A> + <A>
+          := <id> + <A>
+          := a + <A>
+          := a + <A> + <A>
+          := a + <id> + <A>
+          := a + b + <A>
+          := a + b + <id>
+          := a + b + c 
